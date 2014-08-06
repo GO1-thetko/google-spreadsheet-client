@@ -32,7 +32,7 @@ class ListFeed
      * 
      * @var \SimpleXMLElement
      */
-    protected $xml;
+    public $xml;
 
     /**
      * Constructor
@@ -111,7 +111,7 @@ class ListFeed
      * 
      * @return array
      */
-    protected function getColumnNames($xml)
+    public function getColumnNames($xml)
     {
         $ret = array();
         foreach($xml->entry->xpath('gsx:*') as $col) {
